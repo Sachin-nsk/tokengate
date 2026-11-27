@@ -5,6 +5,7 @@
 Put a gateway in front of every LLM call, log tokens, cost and latency per feature, route easy requests to cheaper models, cache repeated prompts, and show a credible before-vs-after.
 
 ### Success criteria (all measured, all in the final case study)
+S2 and S3 need paid API runs, which are not planned (see `OPEN-QUESTIONS.md`). They remain the targets, and are reported as unmeasured rather than estimated from the fake upstream.
 | # | Criterion | Target |
 |---|---|---|
 | S1 | Gateway overhead, p99, excluding upstream | < 2 ms at 1,000 req/s (k6, fake upstream) |
@@ -120,7 +121,7 @@ Prices live in `deploy/prices.yaml`, versioned, with the source date. Each entry
 | 5 | Policy engine (YAML hot reload), rules router + effort, budgets and rate limits, admin API (OpenAPI) |
 | 6 | Shadow judge, quality dashboard, automatic promote / rollback of routes |
 | 7 | Learned router (train in Python, serve in Go), cascade with escalation, routing dashboard |
-| 8 | k6 load tests, final live run, case study with before/after numbers, README polish |
+| 8 | k6 load tests, case study (fake-upstream and local measurements only, no Claude savings claims), README polish |
 
 ## 9. Scope
 

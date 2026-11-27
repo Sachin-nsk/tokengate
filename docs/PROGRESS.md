@@ -2,14 +2,14 @@
 
 ## Week 0 — Repo and design
 - [x] Repo created, plan, ADRs 0001–0006
-- [ ] Plan reviewed by the user
+- [x] Plan reviewed by the user
 
 ## Week 1 — Toolchain, CI, local stack
-- [ ] Install Go 1.27 and start Docker Desktop
-- [ ] Go module + Python project skeletons with lint and test passing
-- [ ] GitHub Actions: lint, test, build, image scan
-- [ ] Compose: Kafka (KRaft), ClickHouse, Redis, Prometheus, Grafana, Tempo
-- [ ] Fake upstream (Anthropic-compatible mock)
+- [x] Install Go 1.27 and start Docker Desktop (local Go is blocked by Windows Application Control; builds run in Docker, see docs/DEV.md)
+- [x] Go module + Python project skeletons with lint and test passing
+- [x] GitHub Actions: lint, test, build, image scan (written; first run happens after push)
+- [x] Compose: Kafka (KRaft), ClickHouse, Redis, Prometheus, Grafana, Tempo (all healthy, Grafana datasources connect)
+- [x] Fake upstream (Anthropic-compatible mock)
 
 ## Week 2 — Passthrough proxy
 - [ ] Non-streaming and SSE streaming passthrough
@@ -42,4 +42,4 @@
 
 ## Week 8 — Proof
 - [ ] k6 load tests (S1)
-- [ ] Final live run, case study, README
+- [ ] Case study, README
